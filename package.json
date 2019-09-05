@@ -22,7 +22,7 @@
   "license": "MIT",
   "bin": {
     "pairing-partners": "./bin/pairing-partners",
-    "pp": "./bin/pairing-partners"
+    "pps": "./bin/pairing-partners"
   },
   "bugs": {
     "url": "https://github.com/designfrontier/pairing-partners/issues"

@@ -6,7 +6,7 @@ for a team of people.
 
 Usage:
   pairing-partners [--no-slack, -ns] [--help, -h]
-  pp [--no-slack, -ns] [--help, -h]
+  pps [--no-slack, -ns] [--help, -h]
 
 --no-slack, -ns
   This disables the @ sign prefix. By default it adds this to make it easy to
