@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const { output, getTeam } = require('../src/index');
+const { help } = require('../src/help');
+
+const argv = require('minimist')(process.argv.slice(2), {
+  boolean: ['slack', 'help', 'team'],
+  alias: {
+    ns: 'slack',
+    h: 'help',
+    t: 'team'
+  },
+  default: {
+    slack: true,
+    help: false,
+    team: false
+  }
+});
+
+if (argv.help) {
+  // eslint-disable-next-line no-console
+  console.log(help);
+  process.exit();
+}
+
+if (argv.team) {
+  // eslint-disable-next-line no-console
+  console.log('YOUR TEAM IS CONFIGURED AS:');
+  // eslint-disable-next-line no-console
+  console.log(getTeam());
+  process.exit();
+}
+
+// eslint-disable-next-line no-console
+console.log(output(argv.slack));
