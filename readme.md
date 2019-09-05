@@ -10,19 +10,35 @@ For now it outputs a nice-ish formatted message with the names in it.
 
 1. install with `npm i -g pairing-partners`
 2. add a comma-delimited list of your team's slackhandles/names to your
-   env vars. It must be named `TEAM`
-   `export TEAM="luke,han,leia,chewy,darth vader,r2d2"`
+   env vars. It must be named `TEAM`.
+   `export TEAM="luke,han,leia,chewy,darth vader,r2d2"`. The easiest thing to do
+   is to put this in your .bashrc/.zshrc or some other file that is sourced into
+   your terminal's environment.
 3. that's it!
 
 ## Usage
 
-`pairing-partners`
+```
+Usage:
+  pairing-partners [--no-slack, -ns] [--help, -h]
+  pps [--no-slack, -ns] [--help, -h]
 
-or
+--no-slack, -ns
+  This disables the @ sign prefix. By default it adds this to make it easy to
+  post the pairing into slack to let people know. But if you don't need that
+  then use this argument to turn that off.
 
-`TEAM="r2d2,c3p0,wedge" pairing-partners`
+--help, -h
+  Outputs this helpful help file.
 
-which allows you to set the team inline.
+--team, -t
+  Outputs the team list and not the pairing assignments.
+```
 
-If you don't want it to output slack (with an @ prefix on names) then you can
-pass it the `--no-slack` argument.
+# Futures plans
+
+1. add contributor docs
+2. add the ability to publish straight to slack with something like `slack-pipe`
+3. add unit tests
+4. add a config file instead of env vars as an option for storing config
+5. yet un-imagined things
