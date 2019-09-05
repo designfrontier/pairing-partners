@@ -41,4 +41,6 @@ Usage:
 2. add the ability to publish straight to slack with something like `slack-pipe`
 3. add unit tests
 4. add a config file instead of env vars as an option for storing config
-5. yet un-imagined things
+5. --exclude param that excludes names passed to it for when people are out of
+   town or whatever
+6. Other things?
