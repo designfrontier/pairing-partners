@@ -8,7 +8,10 @@
     "pretest": "eslint .",
     "prettier": "prettier src/**/*.js bin/src/**/*js",
     "prettier:write": "prettier --write src/**/*.js bin/src/**/*js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run eslint",
+    "release": "npm test && echo ' => releasing' && tom",
+    "release:minor": "npm test && echo ' => releasing' && tom --type=minor",
+    "release:major": "npm test && echo ' => releasing' && tom --type=major"
   },
   "repository": {
     "type": "git",
