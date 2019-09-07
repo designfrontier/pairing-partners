@@ -20,8 +20,8 @@ For now it outputs a nice-ish formatted message with the names in it.
 
 ```
 Usage:
-  pairing-partners [--no-slack, -ns] [--help, -h]
-  pps [--no-slack, -ns] [--help, -h]
+  pairing-partners [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>]
+  pps [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>]
 
 --no-slack, -ns
   This disables the @ sign prefix. By default it adds this to make it easy to
@@ -33,6 +33,11 @@ Usage:
 
 --team, -t
   Outputs the team list and not the pairing assignments.
+
+--exclude, -e
+  Takes a commadelimited list of team members to exclude from the pairings.
+  For example --exclude lando,luke
+  Would exclude Lando and Luke from pairing generation.
 ```
 
 # Futures plans
@@ -41,6 +46,4 @@ Usage:
 2. add the ability to publish straight to slack with something like `slack-pipe`
 3. add unit tests
 4. add a config file instead of env vars as an option for storing config
-5. --exclude param that excludes names passed to it for when people are out of
-   town or whatever
-6. Other things?
+5. Other things?

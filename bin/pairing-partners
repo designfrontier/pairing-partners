@@ -5,10 +5,12 @@ const { help } = require('../src/help');
 
 const argv = require('minimist')(process.argv.slice(2), {
   boolean: ['slack', 'help', 'team'],
+  string: ['exclude'],
   alias: {
     ns: 'slack',
     h: 'help',
-    t: 'team'
+    t: 'team',
+    e: 'exclude'
   },
   default: {
     slack: true,
@@ -32,4 +34,4 @@ if (argv.team) {
 }
 
 // eslint-disable-next-line no-console
-console.log(output(argv.slack));
+console.log(output(argv.slack, argv.exclude));
