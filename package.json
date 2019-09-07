@@ -8,7 +8,7 @@
     "pretest": "eslint .",
     "prettier": "prettier src/**/*.js bin/src/**/*js",
     "prettier:write": "prettier --write src/**/*.js bin/src/**/*js",
-    "test": "npm run eslint",
+    "test": "jest",
     "release": "npm test && echo ' => releasing' && tom",
     "release:minor": "npm test && echo ' => releasing' && tom --type=minor",
     "release:major": "npm test && echo ' => releasing' && tom --type=major"
@@ -32,23 +32,24 @@
   },
   "homepage": "https://github.com/designfrontier/pairing-partners#readme",
   "devDependencies": {
-    "tom-sawyer": "^0.1.7",
-    "eslint": "6.2.1",
-    "eslint-config-prettier": "6.1.0",
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.2.0",
     "eslint-config-semistandard": "15.0.0",
-    "eslint-config-standard": "14.0.1",
-    "eslint-plugin-flowtype": "4.2.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-flowtype": "4.3.0",
     "eslint-plugin-format-message": "6.2.3",
     "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jest": "22.15.2",
-    "eslint-plugin-node": "9.1.0",
+    "eslint-plugin-jest": "22.17.0",
+    "eslint-plugin-node": "10.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "husky": "3.0.4",
+    "husky": "3.0.5",
+    "jest": "^24.9.0",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
-    "semistandard-prettier-eslint": "1.0.2"
+    "semistandard-prettier-eslint": "1.0.2",
+    "tom-sawyer": "^0.1.7"
   },
   "husky": {
     "hooks": {

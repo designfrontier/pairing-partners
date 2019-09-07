@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-function shuffle(array) {
+function shuffle(array, excludeList = '') {
   let currentIndex = array.length;
   let temporaryValue;
   let randomIndex;
@@ -19,9 +19,9 @@ function shuffle(array) {
   return array;
 }
 
-const getTeam = team => {
+const getTeam = (team, excluded = '') => {
   if (process.env.TEAM) {
-    return process.env.TEAM.split(',');
+    return process.env.TEAM.split(',').filter(p => !excluded.includes(p));
   }
 
   return team;
@@ -31,10 +31,10 @@ const formatPerson = (p, slackStyle) => {
   return slackStyle ? `@${p}` : p;
 };
 
-const output = slackStyle => {
+const output = (slackStyle, excludeList) => {
   const team = [];
 
-  const shuffled = shuffle(getTeam(team));
+  const shuffled = shuffle(getTeam(team, excludeList));
   const first = shuffled.slice(0, shuffled.length / 2);
   const last = shuffled.slice(first.length, shuffled.length);
 
