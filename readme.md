@@ -38,6 +38,15 @@ Usage:
   Takes a commadelimited list of team members to exclude from the pairings.
   For example --exclude lando,luke
   Would exclude Lando and Luke from pairing generation.
+
+--minimumSize, -m
+  Tell it how many people you want as the minimum size for pairing groups.
+  `-ms 3` means no group will be smaller than 3.
+
+--frequency, -f
+  Provide an alternate string for the message at the top of the pairing
+  groups
+  Pairing Partners for the {frequency} :party: :pairing:
 ```
 
 # Futures plans
