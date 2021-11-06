@@ -5,8 +5,8 @@ Welcome to pairing-partners! The easy way to generat pairing assignments
 for a team of people.
 
 Usage:
-  pairing-partners [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>]
-  pps [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>]
+  pairing-partners [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>] [--minimumSize, -m <size-here>] [--frequency, -f <string>]
+  pps [--no-slack, -ns] [--help, -h] [--exclude, -e <list-here>] [--minimumSize, -m <size-here>] [--frequency, -f <string>]
 
 --no-slack, -ns
   This disables the @ sign prefix. By default it adds this to make it easy to
