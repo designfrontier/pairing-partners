@@ -10,13 +10,17 @@ const argv = require('minimist')(process.argv.slice(2), {
     ns: 'slack',
     h: 'help',
     t: 'team',
-    e: 'exclude'
+    e: 'exclude',
+    m: 'minimumSize',
+    f: 'frequency',
   },
   default: {
     slack: true,
     help: false,
-    team: false
-  }
+    team: false,
+    minimumSize: 2,
+    frequency: 'week',
+  },
 });
 
 if (argv.help) {
@@ -34,4 +38,4 @@ if (argv.team) {
 }
 
 // eslint-disable-next-line no-console
-console.log(output(argv.slack, argv.exclude));
+console.log(output(argv.slack, argv.exclude, argv.minimumSize, argv.frequency));

@@ -6,7 +6,7 @@
     "semistandard",
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
-    "prettier/standard"
+    "prettier"
   ],
   "plugins": ["jest"],
   "rules": {
